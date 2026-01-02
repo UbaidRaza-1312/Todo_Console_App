@@ -1,0 +1,23 @@
+[project]
+name = "console_todo_app"
+version = "0.1.0"
+description = "A simple console-based todo application."
+requires-python = ">=3.13"
+dependencies = [
+    "rich",
+]
+
+[project.scripts]
+todo = "console.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["console"]
+
+[tool.uv.workspace]
+members = [
+    "console",
+]
